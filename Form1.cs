@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Qlyquancafe.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,12 +20,26 @@ namespace Qlyquancafe
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            fTablemanage f = new fTablemanage();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            string userName = txbUserName.Text;
+            string passWord = txbPassWord.Text;
+            
+            if (Login(userName, passWord))
+            {
+                fTablemanage f = new fTablemanage();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+           else
+            {
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu !");
+            }
         }
 
+        bool Login(string userName, string passWord)
+        {
+            return AccountDAO.Instance.Login(userName, passWord);
+        }
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -32,7 +47,7 @@ namespace Qlyquancafe
 
         private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Ban thuc su muon thoat","THONG BAO",MessageBoxButtons.OKCancel)!= System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Bạn thật sự muốn thoát","Thông báo",MessageBoxButtons.OKCancel)!= System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
             }
