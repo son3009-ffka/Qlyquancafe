@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
+using System.Linq;      
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,9 +20,9 @@ namespace Qlyquancafe.DAO
 
         public bool Login(string userName, string passWord)
         {
-            string query = "SELECT * FROM Account WHERE UserName = N'" + userName + "' and PassWord = N'" + passWord + "' ";
+            string query = "SELECT * FROM Account where UserName = N'" + userName + "' AND PassWord = N'" + passWord +"' ";
 
-            DataTable result = DataProvider.Instance.ExcuteQuery(query);
+            DataTable result = DataProvider.Instance.ExcuteQuery(query, new object[] {userName, passWord});
             return result.Rows.Count > 0;
             
         }
