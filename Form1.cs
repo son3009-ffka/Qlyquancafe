@@ -1,4 +1,5 @@
 ﻿using Qlyquancafe.DAO;
+using Qlyquancafe.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,12 +21,14 @@ namespace Qlyquancafe
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            
             string userName = txbUserName.Text;
             string passWord = txbPassWord.Text;
             
             if (Login(userName, passWord))
             {
-                fTablemanage f = new fTablemanage();
+                Account loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
+                fTablemanage f = new fTablemanage(loginAccount);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();

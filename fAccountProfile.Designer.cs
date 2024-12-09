@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtusername = new System.Windows.Forms.TextBox();
+            this.txbUserName = new System.Windows.Forms.TextBox();
             this.txtnamelogin = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txbDisplay = new System.Windows.Forms.TextBox();
@@ -54,31 +54,34 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.txtusername);
+            this.panel2.Controls.Add(this.txbUserName);
             this.panel2.Controls.Add(this.txtnamelogin);
             this.panel2.Location = new System.Drawing.Point(27, 22);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(476, 80);
             this.panel2.TabIndex = 1;
             // 
-            // txtusername
+            // txbUserName
             // 
-            this.txtusername.BackColor = System.Drawing.SystemColors.Window;
-            this.txtusername.Location = new System.Drawing.Point(148, 34);
-            this.txtusername.Name = "txtusername";
-            this.txtusername.ReadOnly = true;
-            this.txtusername.Size = new System.Drawing.Size(301, 22);
-            this.txtusername.TabIndex = 2;
+            this.txbUserName.BackColor = System.Drawing.SystemColors.Window;
+            this.txbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbUserName.Location = new System.Drawing.Point(185, 32);
+            this.txbUserName.Name = "txbUserName";
+            this.txbUserName.ReadOnly = true;
+            this.txbUserName.Size = new System.Drawing.Size(264, 24);
+            this.txbUserName.TabIndex = 2;
+            this.txbUserName.TextChanged += new System.EventHandler(this.txbUserName_TextChanged);
             // 
             // txtnamelogin
             // 
             this.txtnamelogin.AutoSize = true;
-            this.txtnamelogin.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnamelogin.Location = new System.Drawing.Point(25, 34);
+            this.txtnamelogin.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnamelogin.ForeColor = System.Drawing.Color.Tomato;
+            this.txtnamelogin.Location = new System.Drawing.Point(3, 32);
             this.txtnamelogin.Name = "txtnamelogin";
-            this.txtnamelogin.Size = new System.Drawing.Size(117, 16);
+            this.txtnamelogin.Size = new System.Drawing.Size(150, 21);
             this.txtnamelogin.TabIndex = 1;
-            this.txtnamelogin.Text = "TEN DANG NHAP:";
+            this.txtnamelogin.Text = "Tên đăng nhập :";
             // 
             // panel1
             // 
@@ -91,20 +94,21 @@
             // 
             // txbDisplay
             // 
-            this.txbDisplay.Location = new System.Drawing.Point(148, 34);
+            this.txbDisplay.Location = new System.Drawing.Point(185, 34);
             this.txbDisplay.Name = "txbDisplay";
-            this.txbDisplay.Size = new System.Drawing.Size(301, 22);
+            this.txbDisplay.Size = new System.Drawing.Size(264, 22);
             this.txbDisplay.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 34);
+            this.label1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Tomato;
+            this.label1.Location = new System.Drawing.Point(7, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 16);
+            this.label1.Size = new System.Drawing.Size(124, 21);
             this.label1.TabIndex = 1;
-            this.label1.Text = "TEN HIEN THI:";
+            this.label1.Text = "Tên hiển thị :";
             // 
             // panel3
             // 
@@ -117,20 +121,22 @@
             // 
             // txbPassword
             // 
-            this.txbPassword.Location = new System.Drawing.Point(148, 34);
+            this.txbPassword.Location = new System.Drawing.Point(185, 34);
             this.txbPassword.Name = "txbPassword";
-            this.txbPassword.Size = new System.Drawing.Size(301, 22);
+            this.txbPassword.Size = new System.Drawing.Size(264, 22);
             this.txbPassword.TabIndex = 2;
+            this.txbPassword.UseSystemPasswordChar = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 34);
+            this.label2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Tomato;
+            this.label2.Location = new System.Drawing.Point(7, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 16);
+            this.label2.Size = new System.Drawing.Size(100, 21);
             this.label2.TabIndex = 1;
-            this.label2.Text = "MAT KHAU:";
+            this.label2.Text = "Mật khẩu :";
             // 
             // panel4
             // 
@@ -143,20 +149,23 @@
             // 
             // txbReenterpass
             // 
-            this.txbReenterpass.Location = new System.Drawing.Point(148, 34);
+            this.txbReenterpass.Location = new System.Drawing.Point(185, 34);
             this.txbReenterpass.Name = "txbReenterpass";
-            this.txbReenterpass.Size = new System.Drawing.Size(301, 22);
+            this.txbReenterpass.Size = new System.Drawing.Size(264, 22);
             this.txbReenterpass.TabIndex = 2;
+            this.txbReenterpass.UseSystemPasswordChar = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 34);
+            this.label3.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Tomato;
+            this.label3.Location = new System.Drawing.Point(7, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 16);
+            this.label3.Size = new System.Drawing.Size(177, 21);
             this.label3.TabIndex = 1;
-            this.label3.Text = "NHAP LAI MK:";
+            this.label3.Text = "Nhập lại mật khẩu :";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel5
             // 
@@ -169,36 +178,43 @@
             // 
             // txbNewPassword
             // 
-            this.txbNewPassword.Location = new System.Drawing.Point(148, 34);
+            this.txbNewPassword.Location = new System.Drawing.Point(185, 34);
             this.txbNewPassword.Name = "txbNewPassword";
-            this.txbNewPassword.Size = new System.Drawing.Size(301, 22);
+            this.txbNewPassword.Size = new System.Drawing.Size(264, 22);
             this.txbNewPassword.TabIndex = 2;
+            this.txbNewPassword.UseSystemPasswordChar = true;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 34);
+            this.label4.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Tomato;
+            this.label4.Location = new System.Drawing.Point(7, 34);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 16);
+            this.label4.Size = new System.Drawing.Size(140, 21);
             this.label4.TabIndex = 1;
-            this.label4.Text = "MAT KHAU MOI:";
+            this.label4.Text = "Mật khẩu mới :";
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(325, 486);
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.Tomato;
+            this.btnUpdate.Location = new System.Drawing.Point(212, 471);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(122, 38);
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Cập nhật ";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExti
             // 
             this.btnExti.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExti.Location = new System.Drawing.Point(418, 486);
+            this.btnExti.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExti.ForeColor = System.Drawing.Color.Tomato;
+            this.btnExti.Location = new System.Drawing.Point(376, 471);
             this.btnExti.Name = "btnExti";
-            this.btnExti.Size = new System.Drawing.Size(75, 23);
+            this.btnExti.Size = new System.Drawing.Size(117, 38);
             this.btnExti.TabIndex = 7;
             this.btnExti.Text = "Thoát";
             this.btnExti.UseVisualStyleBackColor = true;
@@ -209,6 +225,7 @@
             this.AcceptButton = this.btnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.CancelButton = this.btnExti;
             this.ClientSize = new System.Drawing.Size(528, 544);
             this.Controls.Add(this.btnExti);
@@ -238,7 +255,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtusername;
+        private System.Windows.Forms.TextBox txbUserName;
         private System.Windows.Forms.Label txtnamelogin;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txbDisplay;

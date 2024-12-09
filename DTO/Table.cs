@@ -39,7 +39,7 @@ namespace Qlyquancafe.DTO
 
         private int iD;
 
-        private int ID
+        public int ID
         {
             get { return iD; }
             set { iD = value; }

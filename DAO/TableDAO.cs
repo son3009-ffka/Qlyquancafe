@@ -22,6 +22,11 @@ namespace Qlyquancafe.DAO
         public static int TableHeight = 85;
 
         private TableDAO() { }
+
+        public void SwitTable(int id1, int id2)
+        {
+            DataProvider.Instance.ExcuteQuery("USP_SwitchTable @idTable1 , @idTable2", new object[] {id1, id2});
+        }
         public List<Table> LoadTableList()
         {
             List<Table> tableList = new List<Table>();

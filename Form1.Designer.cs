@@ -44,19 +44,21 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.LavenderBlush;
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(774, 374);
+            this.panel1.Size = new System.Drawing.Size(806, 391);
             this.panel1.TabIndex = 0;
             // 
             // btnExit
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.Tomato;
             this.btnExit.Location = new System.Drawing.Point(447, 270);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(106, 41);
@@ -68,6 +70,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.Tomato;
             this.btnLogin.Location = new System.Drawing.Point(172, 270);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(163, 41);
@@ -87,9 +90,10 @@
             // 
             // txbPassWord
             // 
+            this.txbPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPassWord.Location = new System.Drawing.Point(229, 34);
             this.txbPassWord.Name = "txbPassWord";
-            this.txbPassWord.Size = new System.Drawing.Size(461, 22);
+            this.txbPassWord.Size = new System.Drawing.Size(461, 30);
             this.txbPassWord.TabIndex = 2;
             this.txbPassWord.UseSystemPasswordChar = true;
             // 
@@ -97,7 +101,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 34);
+            this.label1.ForeColor = System.Drawing.Color.Tomato;
+            this.label1.Location = new System.Drawing.Point(38, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 24);
             this.label1.TabIndex = 1;
@@ -114,15 +119,17 @@
             // 
             // txbUserName
             // 
+            this.txbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbUserName.Location = new System.Drawing.Point(229, 34);
             this.txbUserName.Name = "txbUserName";
-            this.txbUserName.Size = new System.Drawing.Size(461, 22);
+            this.txbUserName.Size = new System.Drawing.Size(461, 30);
             this.txbUserName.TabIndex = 2;
             // 
             // txtnamelogin
             // 
             this.txtnamelogin.AutoSize = true;
             this.txtnamelogin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnamelogin.ForeColor = System.Drawing.Color.Tomato;
             this.txtnamelogin.Location = new System.Drawing.Point(25, 34);
             this.txtnamelogin.Name = "txtnamelogin";
             this.txtnamelogin.Size = new System.Drawing.Size(165, 24);
@@ -139,7 +146,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dang nhap";
+            this.Text = "Đăng nhập";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fLogin_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
